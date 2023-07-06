@@ -68,7 +68,7 @@ class BuildCollider:
             self.configuration["config_simulation"],
             self.configuration["config_collider"],
             save_collider=False,
-            return_collider_without_bb=False,
+            return_collider_before_bb=False,
         )
 
         # Remove the folder "correction" which was created during the process
