@@ -26,7 +26,7 @@ class BuildCollider:
         # Load and tune collider
         self.collider = self.load_and_tune_collider()
 
-        # Compute collider without beam-beam
+        # Copy collider and remove beam-beam
         self.collider_without_bb = xt.Multiline.from_dict(self.collider.to_dict())
         self.collider_without_bb.build_trackers()
         self.collider_without_bb.vars["beambeam_scale"] = 0
